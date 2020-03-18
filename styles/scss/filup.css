@@ -417,21 +417,9 @@ input[type="file"] {
   color: white;
 }
 
-#mySidebar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: middle;
-      -ms-flex-pack: middle;
-          justify-content: middle;
-}
-
 #mySidebar .sidebar-container {
   margin: auto 0;
+  margin-top: 8vh;
 }
 
 .file-img {
@@ -457,10 +445,17 @@ img {
   /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
 .dropdown-container a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1em;
   color: #818181;
   display: block;
   -webkit-transition: 0.3s;
@@ -484,7 +479,7 @@ img {
 .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.1em;
   color: #818181;
   display: block;
   border: none;
@@ -495,6 +490,26 @@ img {
   outline: none;
   -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
+}
+
+.dropdown-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown-btn p {
+  display: inline;
 }
 
 /* On mouse-over */
@@ -515,13 +530,6 @@ img {
 .active {
   background-color: green;
   color: white;
-}
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
 }
 
 /* Optional: Style the caret down icon */
@@ -606,5 +614,21 @@ img {
   height: 400px;
   padding: 10px;
   border: 2px solid #aaaaaa;
+}
+
+#goBtn {
+  padding: 35px;
+  border-radius: 100%;
+  border: 0;
+  background-color: #f15642;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1.1em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#goBtn:hover {
+  background-color: #bf220e;
 }
 /*# sourceMappingURL=filup.css.map */

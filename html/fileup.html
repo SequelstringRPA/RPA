@@ -30,16 +30,17 @@
         <!-- <input type="submit" value="Upload File" /> -->
         <button class="upload-file-btn clear-btn">Clear</button>
         <div class="drag-n-drop-div dropzone"></div>
+        <button id="goBtn">Go</button>
       </div>
     </div>
 
     <div class="modal">
       <div class="modal-content">
-        <form action="">
+        <form action="#" id="excel-form">
           <span class="close-button">&times;</span>
           <div class="modal-header">Select File</div>
 
-          <div class="file-name-txt">File Name : <span></span></div>
+          <div class="file-name-txt" id="excel-file-name">File Name : <span></span></div>
           <input id="file-upload" type="file" name="fileUpload" accept=".pdf" />
           <label for="file-upload" id="file-drag">
             Select a file to upload
@@ -51,11 +52,35 @@
           </label>
 
           <div class="modal-save">
-            <input type="submit" id="upload-file-save" value="Save" />
+            <input type="submit" id="upload-file-save"  value="Save" />
           </div>
         </form>
       </div>
     </div>
+
+    <!-- <div class="modal">
+      <div class="modal-content">
+        <form action="">
+          <span class="close-button">&times;</span>
+          <div class="modal-header">Select File</div>
+
+          <div class="file-name-txt">File Name : </div>
+          <input id="file-upload" type="file" name="fileUpload" accept=".pdf" />
+          <label for="file-upload" id="file-drag">
+            Select a file to upload
+            <br />OR <br />Drag a file into this box
+
+            <br /><br />
+            <span id="file-upload-btn" class~="button">Add a file</span>
+          </label>
+
+          <div class="modal-save">
+            <input type="submit" id="upload-file-save" value="Save" />
+          </div>
+        </form>
+      </div>
+    </div> -->
+
 
     <button class="collapsible-sidebar-arrow " onclick="openNav();">
       <img src="../assets/002-left-arrow.png" alt="" />
@@ -64,19 +89,48 @@
     <div id="mySidebar" class="right-sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
           <div class="sidebar-container">
-            <button class="dropdown-btn"><img src="../assets/pdf.svg" width="30px" height="30px"> PDF <i class="fa fa-caret-down"></i>
+            <button class="dropdown-btn">
+              <img src="../assets/pdf.svg" width="30px" height="30px"/> 
+              <p>PDF</p> 
+              <i class="fa fa-caret-down"></i>
             </button> 
             <div class="dropdown-container">
               <a href="#"><img src="../assets/pdf.svg" class="file-img drag-drop" id="drag1" > Link 1</a>
               <a href="#"><img src="../assets/pdf.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
               <a href="#"><img src="../assets/pdf.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
             </div> 
-             <button class="dropdown-btn"><img src="../assets/excel.svg" width="30px" height="30px"> Excel <i class="fa fa-caret-down"></i>
+             <button class="dropdown-btn">
+              <img src="../assets/excel.svg" width="30px" height="30px"> 
+              <p>Excel</p>  
+              <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" > Link 1</a>
-              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
-              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
+              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 launch" >Launch Excel</a>
+              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 attachExcel" >Attach to Running Excel</a> -->
+              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 readExcel" >Read from Excel</a> -->
+              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 writeExcel" >Write to Excel</a> -->
+              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 saveExcel" >Save Excel</a>
+              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 quitExcel" >Quit Excel</a>
+              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 newWorksheet" >Add new Worksheet</a> -->
+
+              <!-- <button class="dropdown-btn"><img src="../assets/excel.svg" width="30px" height="30px">Advanced Excel <i class="fa fa-caret-down"></i> -->
+              <!-- </button> -->
+              <div class="dropdown-container">
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Run Excel Macro</a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Get Active Excel </a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Delete Excel </a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Rename Excel </a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Select Cells in Excel </a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Get Selected Cell Range</a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Copy Cells From Excel</a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Paste Cells to Excel</a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Insert Row/Column to Excel</a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Delete Row/Column from Excel</a>
+                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Get First Free Rown on Column</a>
+
+                
+
+              </div>
             </div>
             <button class="dropdown-btn"><img src="../assets/EMAIL.svg" width="30px" height="30px"> Email<i class="fa fa-caret-down"></i>
             </button>
@@ -104,6 +158,19 @@
               <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
               <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
             </div>
+
+            <button class="dropdown-btn"><img src="../assets/sap.svg" width="30px" height="30px"> Files<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-container">
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Get Files</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Copy File(s)</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Move File(s)</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Delete File(s)</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Rename File(s)</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Read Text from File</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Write Text from File</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Read from CSV File</a>
+              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Write to CSV File</a>
+            </div>
           </div>
           
         <!-- <div class="block ">
@@ -127,23 +194,11 @@
   <script src="https://code.jquery.com/ui/jquery-ui-git.js "></script>
 
   <script src="../app.js"></script>
+  <script src="../js/sendData.js"></script>
 
   
 <script>
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-dropdown[i].addEventListener("click", function() {
-this.classList.toggle("active");
-var dropdownContent = this.nextElementSibling;
-if (dropdownContent.style.display === "block") {
-dropdownContent.style.display = "none";
-} else {
-dropdownContent.style.display = "block";
-}
-});
-} 
+ 
 </script>
   
 <script>if (window.module) module = window.module;</script>

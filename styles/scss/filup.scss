@@ -313,12 +313,9 @@ input[type="file"] {
 }
 
 #mySidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: middle;
-
   .sidebar-container {
     margin: auto 0;
+    margin-top: 8vh;
   }
 }
 
@@ -345,13 +342,20 @@ img {
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 
-.dropdown-container a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
 }
 
 .sidenav {
@@ -371,7 +375,7 @@ img {
 .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.1em;
   color: #818181;
   display: block;
   border: none;
@@ -381,6 +385,16 @@ img {
   cursor: pointer;
   outline: none;
   transition: all ease-in 0.3s;
+}
+
+.dropdown-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  p {
+    display: inline;
+  }
 }
 
 /* On mouse-over */
@@ -400,13 +414,6 @@ img {
 .active {
   background-color: green;
   color: white;
-}
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
 }
 
 /* Optional: Style the caret down icon */
@@ -486,4 +493,21 @@ img {
   height: 400px;
   padding: 10px;
   border: 2px solid #aaaaaa;
+}
+
+//Go Button
+
+#goBtn {
+  padding: 35px;
+  border-radius: 100%;
+  border: 0;
+  background-color: $clearBtnColor;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: darken($clearBtnColor, 20%);
+  }
 }

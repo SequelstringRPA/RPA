@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="temp.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-content">
+        <form action="">
+          <span class="close-button">&times;</span>
+          <div class="modal-header">Select File</div>
+
+          <div class="file-name-txt">
+            File Name
+            <input type="text" />
+
+            <button></button>
+          </div>
+          <input
+            id="file-upload"
+            type="file"
+            name="fileUpload"
+            accept=".xlsx"
+          />
+          <label for="file-upload" id="file-drag">
+            Select a file to upload
+            <br />OR <br />Drag a file into this box
+
+            <br /><br />
+            <span id="file-upload-btn" class="button">Add a file</span>
+          </label>
+
+          <div class="modal-save">
+            <input type="submit" id="upload-file-save" value="Save" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

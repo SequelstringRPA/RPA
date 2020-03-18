@@ -33,7 +33,7 @@ window.addEventListener("click", windowOnClick);
 //Sidebar Starts
 function openNav() {
   document.getElementsByClassName("closebtn")[0].style.display = "block";
-  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("mySidebar").style.width = "340px";
 }
 
 function closeNav() {
@@ -69,8 +69,6 @@ let fileInputForm = document.querySelector(".file-input-div");
 // Drag n Drop Starts
 $(document).ready(function() {
   var dragOpts = {
-      // helper: "clone",
-      // zIndex: 1000
       containment: "document",
       helper: "clone",
       opacity: 0.7,
@@ -85,7 +83,7 @@ $(document).ready(function() {
             cloneDragOpts = {
               containment: ".drag-n-drop-div"
             };
-          cloneElement.removeAttr("id");
+          // cloneElement.removeAttr("id");
           cloneElement.removeClass();
           cloneElement.addClass("open");
           cloneElement
@@ -153,3 +151,18 @@ clearBtn.addEventListener("click", () => {
 });
 
 // ENDS
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
