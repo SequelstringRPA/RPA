@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/scss/signup.css" />
+    <title>Signup - RPA Automation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1>RPA AUTOMATION</h1>
+    </nav>
+    <div id="sidebar">
+      <div class="content-div">
+        <a href="../index.html"><div class="login-div">LOGIN</div></a>
+        <a href="#"><div class="signup-div selected">SIGNUP</div></a>
+        <a href="./fileup.html"
+          ><div class="file-upload-div">FILE UPLOAD</div></a
+        >
+      </div>
+    </div>
+
+    <div id="main-content">
+      <div class="signup-form form-div">
+        <form action="">
+          <h1>Create Account,</h1>
+
+          <div class="username input-div">
+            <input
+              type="text"
+              name="username"
+              id="sigup-uname"
+              placeholder="username"
+            />
+            <label for="signup-uname">username</label>
+          </div>
+
+          <div class="password input-div">
+            <input
+              type="password"
+              name="password"
+              id="signup-passwd"
+              placeholder="password"
+            />
+            <label for="signup-passwd">password</label>
+          </div>
+
+          <div class="repassword input-div">
+            <input
+              type="password"
+              name="repassword"
+              id="repasswd"
+              placeholder="retype password"
+            />
+            <label for="repasswd">retype password</label>
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="LOGIN" />
+            <p>already have an account? <a href="">login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      if (typeof module === "object") {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/ui/jquery-ui-git.js "></script>
+
+    <script src="../app.js"></script>
+
+    <script>
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <script>
+      if (window.module) module = window.module;
+    </script>
+  </body>
+</html>
