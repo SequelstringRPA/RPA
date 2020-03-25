@@ -14,23 +14,36 @@
   </head>
   <body>
     <nav id="navbar">
-      <h1>RPA AUTOMATION</h1>
+      <h1>RPA</h1>
+
+      <a href="../index.html"><div class="login-div">LOGIN</div></a>
+      <a href="./fileup.html"><div class="file-upload-div ">FILE UPLOAD</div></a>
+
+
+      <div id="hamburger" onclick="openNav();">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
 
-    <div id="sidebar">
+    <!-- <div id="sidebar">
       <div class="content-div">
         <a href="../index.html"><div class="login-div">LOGIN</div></a>
         <a href="./signup.html"><div class="signup-div">SIGNUP</div></a>
         <a href="#"><div class="file-upload-div selected">FILE UPLOAD</div></a>
       </div>
-    </div>
+    </div> -->
 
     <div id="main-content">
       <div class="file-input-div">
         <!-- <input type="submit" value="Upload File" /> -->
-        <button class="upload-file-btn clear-btn">Clear</button>
         <div class="drag-n-drop-div dropzone"></div>
-        <button id="goBtn">Go</button>
+        <div class="btn-div">
+          <button id="goBtn">Go</button>  
+          <button class="upload-file-btn clear-btn">Clear</button>
+        </div>
+        
       </div>
     </div>
 
@@ -82,94 +95,94 @@
     </div> -->
 
 
-    <button class="collapsible-sidebar-arrow " onclick="openNav();">
+    <!-- <button class="collapsible-sidebar-arrow " onclick="openNav();">
       <img src="../assets/002-left-arrow.png" alt="" />
-    </button>
+    </button> -->
 
     <div id="mySidebar" class="right-sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
           <div class="sidebar-container">
             <button class="dropdown-btn">
-              <img src="../assets/pdf.svg" width="30px" height="30px"/> 
+              <img src="../assets/folder-icon.png" width="30px" height="30px"/> 
               <p>PDF</p> 
               <i class="fa fa-caret-down"></i>
             </button> 
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/pdf.svg" class="file-img drag-drop" id="drag1" > Link 1</a>
-              <a href="#"><img src="../assets/pdf.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
-              <a href="#"><img src="../assets/pdf.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
+              <a href="#" class="drag-drop"><img src="../assets/pdf.svg" class="file-img " id="drag1" ><span>Link 1</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/pdf.svg" class="file-img " id="drag1" ><span>Link 2</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/pdf.svg" class="file-img " id="drag1" ><span>Link 3</span></a>
             </div> 
              <button class="dropdown-btn">
-              <img src="../assets/excel.svg" width="30px" height="30px"> 
+              <img src="../assets/folder-icon.png" width="30px" height="30px"> 
               <p>Excel</p>  
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 launch" >Launch Excel</a>
-              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 attachExcel" >Attach to Running Excel</a> -->
-              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 readExcel" >Read from Excel</a> -->
-              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 writeExcel" >Write to Excel</a> -->
-              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 saveExcel" >Save Excel</a>
-              <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 quitExcel" >Quit Excel</a>
-              <!-- <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1 newWorksheet" >Add new Worksheet</a> -->
+              <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img" id="drag1 launch" ><span>Launch Excel</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img" id="drag1 attachExcel" ><span>Attach to Running Excel</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img" id="drag1 readExcel" ><span>Read from Excel</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img" id="drag1 writeExcel" ><span>Write to Excel</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img" id="drag1 saveExcel" ><span>Save Excel</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img" id="drag1 quitExcel" ><span>Quit Excel</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img" id="drag1 newWorksheet" ><span>Add new Worksheet</span></a>
 
-              <!-- <button class="dropdown-btn"><img src="../assets/excel.svg" width="30px" height="30px">Advanced Excel <i class="fa fa-caret-down"></i> -->
-              <!-- </button> -->
+              <button class="dropdown-btn"><img src="../assets/folder-icon.png" width="30px" height="30px">Advanced Excel <i class="fa fa-caret-down"></i>
+              </button>
               <div class="dropdown-container">
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Run Excel Macro</a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Get Active Excel </a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Delete Excel </a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Rename Excel </a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Select Cells in Excel </a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Get Selected Cell Range</a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Copy Cells From Excel</a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Paste Cells to Excel</a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Insert Row/Column to Excel</a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Delete Row/Column from Excel</a>
-                <a href="#"><img src="../assets/excel.svg" class="file-img drag-drop" id="drag1" >Get First Free Rown on Column</a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Run Excel Macro</span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Get Active Excel </span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Delete Excel </span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Rename Excel </span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Select Cells in Excel </span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Get Selected Cell Range</span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Copy Cells From Excel</span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Paste Cells to Excel</span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Insert Row/Column to Excel</span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Delete Row/Column from Excel</span></a>
+                <a href="#" class="drag-drop"><img src="../assets/excel.svg" class="file-img " id="drag1" ><span>Get First Free Rown on Column</span></a>
 
                 
 
               </div>
             </div>
-            <button class="dropdown-btn"><img src="../assets/EMAIL.svg" width="30px" height="30px"> Email<i class="fa fa-caret-down"></i>
+            <button class="dropdown-btn"><img src="../assets/folder-icon.png" width="30px" height="30px"> Email<i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/email.svg" class="file-img drag-drop" id="drag1" > Link 1</a>
-              <a href="#"><img src="../assets/email.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
-              <a href="#"><img src="../assets/email.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
+              <a href="#" class="drag-drop"><img src="../assets/email.svg" class="file-img" id="drag1" ><span> Link 1</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/email.svg" class="file-img" id="drag1" ><span>Link 2</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/email.svg" class="file-img" id="drag1" ><span>Link 2</span></a>
             </div>
-            <button class="dropdown-btn"><img src="../assets/outlook1.svg" width="30px" height="30px"> Outlook<i class="fa fa-caret-down"></i>
+            <button class="dropdown-btn"><img src="../assets/folder-icon.png" width="30px" height="30px"> Outlook<i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/outlook1.svg" class="file-img drag-drop" id="drag1" > Link 1</a>
-              <a href="#"><img src="../assets/outlook1.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
-              <a href="#"><img src="../assets/outlook1.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
+              <a href="#" class="drag-drop"><img src="../assets/outlook1.svg" class="file-img " id="drag1" ><span> Link 1</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/outlook1.svg" class="file-img " id="drag1" ><span>Link 2</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/outlook1.svg" class="file-img " id="drag1" ><span>Link 3</span></a>
             </div>
-            <button class="dropdown-btn"><img src="../assets/database.svg" width="30px" height="30px"> Database<i class="fa fa-caret-down"></i></button>
+            <button class="dropdown-btn"><img src="../assets/folder-icon.png" width="30px" height="30px"> Database<i class="fa fa-caret-down"></i></button>
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/database.svg" class="file-img drag-drop" id="drag1" > Link 1</a>
-              <a href="#"><img src="../assets/database.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
-              <a href="#"><img src="../assets/database.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
+              <a href="#" class="drag-drop"><img src="../assets/database.svg" class="file-img " id="drag1" ><span> Link 1</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/database.svg" class="file-img " id="drag1" ><span> Link 2</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/database.svg" class="file-img " id="drag1" ><span> Link 3</span></a>
             </div>
-            <button class="dropdown-btn"><img src="../assets/sap.svg" width="30px" height="30px"> SAP<i class="fa fa-caret-down"></i></button>
+            <button class="dropdown-btn"><img src="../assets/folder-icon.png" width="30px" height="30px"> SAP<i class="fa fa-caret-down"></i></button>
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" > Link 1</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Link 2</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Link 3</a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span> Link 1</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span> Link 2</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span> Link 3</span></a>
             </div>
 
-            <button class="dropdown-btn"><img src="../assets/sap.svg" width="30px" height="30px"> Files<i class="fa fa-caret-down"></i></button>
+            <button class="dropdown-btn"><img src="../assets/folder-icon.png" width="30px" height="30px"> Files<i class="fa fa-caret-down"></i></button>
             <div class="dropdown-container">
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Get Files</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Copy File(s)</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Move File(s)</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Delete File(s)</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Rename File(s)</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Read Text from File</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Write Text from File</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Read from CSV File</a>
-              <a href="#"><img src="../assets/sap.svg" class="file-img drag-drop" id="drag1" >Write to CSV File</a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Get Files</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Copy File(s)</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Move File(s)</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Delete File(s)</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Rename File(s)</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Read Text from File</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Write Text from File</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Read from CSV File</span></a>
+              <a href="#" class="drag-drop"><img src="../assets/sap.svg" class="file-img " id="drag1" ><span>Write to CSV File</span></a>
             </div>
           </div>
           

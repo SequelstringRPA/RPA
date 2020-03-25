@@ -18,13 +18,11 @@
   background: -webkit-gradient(linear, left top, right top, from(#80dec0), to(#2480de));
   background: linear-gradient(to right, #80dec0, #2480de);
   height: 8vh;
+  min-height: 50px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -32,8 +30,10 @@
 
 #navbar h1 {
   color: #fff;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   font-size: 28px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 #sidebar {
@@ -79,7 +79,6 @@
 }
 
 #main-content {
-  margin-left: 15vw;
   height: 92vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,6 +95,35 @@
 .selected {
   color: #185a9d !important;
   font-size: 1.4em !important;
+}
+
+#hamburger {
+  position: absolute;
+  right: 16px;
+}
+
+#hamburger span {
+  display: block;
+  right: 15px;
+  height: 5px;
+  width: 35px;
+  margin-bottom: 6px;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 16px;
+  -webkit-transition: all ease-in 0.15s;
+  transition: all ease-in 0.15s;
+}
+
+#navbar a:hover {
+  color: #d9d9d9;
 }
 
 .form-div {

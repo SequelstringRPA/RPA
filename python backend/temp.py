@@ -6,4 +6,13 @@
 
 # print(fromaddr)
 
-print("Hello world!")
+# print("Hello world!")
+
+import subprocess
+import os
+
+# subprocess.call([r'C:\Users\Nevil\Desktop\book1.xlsx'])
+
+# subprocess.check_call("open", "-a", "Microsoft Excel")
+
+os.system("start Excel.exe  C:/Users/Nevil/Desktop/book1.xlsx")
